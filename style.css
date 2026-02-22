@@ -1,22 +1,20 @@
 :root {
-    --bg-primary: #0b0b0b;
+    --bg-primary: #0a0a0a;
     --bg-secondary: #111111;
     --accent: #c2a35d;
-    --text-primary: #f5f5f5;
-    --text-muted: #9a9a9a;
+    --text-main: #f2f2f2;
+    --text-muted: #9c9c9c;
+    --line: #1c1c1c;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    line-height: 1.7;
-    letter-spacing: 0.3px;
+    font-family: "Georgia", serif;
+    background: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.8;
 }
 
 nav {
@@ -24,38 +22,34 @@ nav {
     padding: 28px 60px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #1a1a1a;
-}
-
-nav strong {
-    font-weight: 400;
-    letter-spacing: 2px;
-    font-size: 0.95rem;
+    border-bottom: 1px solid var(--line);
 }
 
 nav a {
     color: var(--text-muted);
     text-decoration: none;
     margin-left: 30px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
 }
 
-nav a:hover {
-    color: var(--text-primary);
+nav a:hover { color: var(--text-main); }
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 120px 20px;
 }
 
 .hero {
-    padding: 160px 20px 140px;
+    padding: 180px 20px 140px;
     text-align: center;
-    max-width: 900px;
-    margin: auto;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .hero p {
@@ -72,8 +66,8 @@ nav a:hover {
     border: 1px solid var(--accent);
     color: var(--accent);
     text-decoration: none;
-    font-size: 0.9rem;
     letter-spacing: 1px;
+    font-size: 0.85rem;
 }
 
 .button:hover {
@@ -83,23 +77,17 @@ nav a:hover {
 
 .section {
     padding: 120px 20px;
-    max-width: 900px;
-    margin: auto;
+    border-top: 1px solid var(--line);
 }
 
-.section.alt {
-    background: var(--bg-secondary);
-}
+.section.alt { background: var(--bg-secondary); }
 
-.section h2 {
+h2 {
     font-weight: 400;
     margin-bottom: 30px;
 }
 
-.section p {
-    color: var(--text-muted);
-    margin-bottom: 20px;
-}
+p { color: var(--text-muted); }
 
 ul {
     list-style: none;
@@ -107,16 +95,33 @@ ul {
 }
 
 ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #1a1a1a;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
     color: var(--text-muted);
 }
 
 footer {
-    background: #000;
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
-    font-size: 0.8rem;
-    color: #777;
-    border-top: 1px solid #1a1a1a;
+    font-size: 0.75rem;
+    color: #666;
+    border-top: 1px solid var(--line);
+    background: #000;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    background: #111;
+    border: 1px solid var(--line);
+    color: #fff;
+}
+
+button {
+    padding: 14px 40px;
+    background: var(--accent);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
