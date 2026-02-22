@@ -11,7 +11,7 @@
 
 body {
     margin: 0;
-    font-family: "Georgia", serif;
+    font-family: Georgia, serif;
     background: var(--bg-primary);
     color: var(--text-main);
     line-height: 1.8;
@@ -25,21 +25,20 @@ nav {
     border-bottom: 1px solid var(--line);
 }
 
+nav strong {
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
 nav a {
     color: var(--text-muted);
     text-decoration: none;
     margin-left: 30px;
     font-size: 0.85rem;
-    letter-spacing: 1px;
 }
 
 nav a:hover { color: var(--text-main); }
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 120px 20px;
-}
 
 .hero {
     padding: 180px 20px 140px;
@@ -47,7 +46,7 @@ nav a:hover { color: var(--text-main); }
 }
 
 .hero h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 400;
     margin-bottom: 40px;
 }
@@ -78,6 +77,8 @@ nav a:hover { color: var(--text-main); }
 .section {
     padding: 120px 20px;
     border-top: 1px solid var(--line);
+    max-width: 900px;
+    margin: auto;
 }
 
 .section.alt { background: var(--bg-secondary); }
